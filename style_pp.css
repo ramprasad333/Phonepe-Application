@@ -1,0 +1,371 @@
+/* =====================================================
+   PAYEASY - PhonePe style app
+   Easy to read CSS. Each section has a comment.
+   ===================================================== */
+
+
+/* ---------- 1. COLORS (change them here, it updates everywhere) ---------- */
+:root {
+  --purple: #5f259f;        /* main PhonePe-like purple */
+  --purple-dark: #4a1d7d;
+  --purple-light: #efe6fa;
+  --green: #1a9e55;         /* money received */
+  --red: #d93025;           /* money sent */
+  --text: #1f1f2e;          /* main text */
+  --text-light: #6b6b80;    /* small grey text */
+  --background: #f3f1f7;    /* page background */
+  --white: #ffffff;
+}
+
+
+/* ---------- 2. RESET (removes default spacing from browsers) ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;   /* width includes padding, easier to plan */
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+.small-text {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+
+/* ---------- 3. APP CONTAINER ---------- */
+/* On mobile: full screen. On big screens: centered like a phone. */
+.app {
+  max-width: 480px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: var(--background);
+  position: relative;
+  padding-bottom: 90px;     /* space so content is not hidden behind bottom menu */
+}
+
+
+/* ---------- 4. HEADER ---------- */
+.header {
+  background: var(--purple);
+  color: var(--white);
+  padding: 20px 20px 70px;  /* extra bottom padding, the balance card overlaps here */
+  border-radius: 0 0 24px 24px;
+}
+
+.header .small-text {
+  color: #d9c7f0;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--purple);
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--purple-dark);
+  font-size: 18px;
+}
+
+/* Search bar */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 15px;
+  color: var(--text);
+}
+
+
+/* ---------- 5. MAIN CONTENT ---------- */
+.content {
+  padding: 0 16px;
+}
+
+/* Balance card */
+.balance-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: -45px;        /* pulls the card UP so it overlaps the purple header */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 14px rgba(95, 37, 159, 0.15);
+}
+
+.balance-card h1 {
+  font-size: 28px;
+  margin-top: 4px;
+}
+
+.add-money-btn {
+  background: var(--purple);
+  color: var(--white);
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.add-money-btn:hover {
+  background: var(--purple-dark);
+}
+
+
+/* ---------- 6. SECTIONS (white boxes) ---------- */
+.section {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 18px 16px;
+  margin-top: 16px;
+}
+
+.section-title {
+  font-size: 17px;
+  margin-bottom: 16px;
+}
+
+
+/* ---------- 7. ICON GRID ---------- */
+/* 4 items in one row */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px 8px;
+}
+
+.grid-item {
+  text-align: center;
+}
+
+.grid-item .icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 8px;
+  background: var(--purple-light);
+  border-radius: 16px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-item:hover .icon {
+  background: var(--purple);
+}
+
+.grid-item p {
+  font-size: 12px;
+  color: var(--text);
+}
+
+
+/* ---------- 8. OFFER BANNER ---------- */
+.offer-banner {
+  background: var(--purple-dark);
+  color: var(--white);
+  border-radius: 16px;
+  padding: 18px 20px;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.offer-banner h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.offer-banner p {
+  font-size: 13px;
+  color: #d9c7f0;
+}
+
+.offer-btn {
+  background: var(--white);
+  color: var(--purple);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+
+/* ---------- 9. TRANSACTIONS ---------- */
+.transaction {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.transaction:last-child {
+  border-bottom: none;      /* no line after the last item */
+}
+
+.transaction-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--purple-light);
+  color: var(--purple);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;           /* stops the circle from shrinking on small screens */
+}
+
+.transaction-info {
+  flex: 1;                  /* takes all the free space in the middle */
+}
+
+.transaction-info h4 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.amount {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.credit { color: var(--green); }
+.debit  { color: var(--red); }
+
+
+/* ---------- 10. BOTTOM NAVIGATION ---------- */
+.bottom-nav {
+  position: fixed;          /* stays at the bottom while scrolling */
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);   /* keeps it centered */
+  width: 100%;
+  max-width: 480px;         /* same width as the app */
+  background: var(--white);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0 10px;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.nav-item {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 11px;
+}
+
+.nav-item span {
+  font-size: 22px;
+  display: block;
+}
+
+.nav-item.active {
+  color: var(--purple);
+  font-weight: 600;
+}
+
+/* The round scan button in the middle */
+.scan-btn span {
+  width: 56px;
+  height: 56px;
+  margin-top: -28px;        /* lifts it above the bar */
+  background: var(--purple);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid var(--white);
+  box-shadow: 0 4px 10px rgba(95, 37, 159, 0.4);
+}
+
+
+/* ---------- 11. RESPONSIVE (for different screen sizes) ---------- */
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .grid {
+    gap: 12px 4px;
+  }
+  .grid-item p {
+    font-size: 11px;
+  }
+  .balance-card h1 {
+    font-size: 24px;
+  }
+}
+
+/* Laptops and desktops: show the app like a phone in the middle */
+@media (min-width: 600px) {
+  body {
+    padding: 20px 0;
+  }
+  .app {
+    min-height: 0;
+    padding-bottom: 0;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  }
+  .bottom-nav {
+    position: sticky;       /* stays inside the phone frame on big screens */
+    left: auto;
+    transform: none;
+  }
+}

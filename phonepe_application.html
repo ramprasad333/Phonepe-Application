@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- This line makes the page fit properly on mobile screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PayEasy - PhonePe Style App</title>
+
+  <!-- Connect our CSS file -->
+  <link rel="stylesheet" href="style_pp.css">
+</head>
+<body>
+
+  <!-- The whole app sits inside this box. On a big screen it looks like a phone. -->
+  <div class="app">
+
+    <!-- ========== 1. TOP HEADER (purple area) ========== -->
+    <header class="header">
+      <div class="header-top">
+        <div class="profile">
+          <div class="avatar">R</div>
+          <div>
+            <p class="small-text">Welcome back</p>
+            <h2>Rahul Kumar</h2>
+          </div>
+        </div>
+        <button class="icon-btn" aria-label="Notifications">🔔</button>
+      </div>
+
+      <!-- Search bar -->
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="text" placeholder="Search for people, bills, apps...">
+      </div>
+    </header>
+
+    <!-- ========== 2. MAIN CONTENT ========== -->
+    <main class="content">
+
+      <!-- Balance card (overlaps the header a little) -->
+      <section class="balance-card">
+        <div>
+          <p class="small-text">Wallet Balance</p>
+          <h1>₹ 12,450.00</h1>
+        </div>
+        <button class="add-money-btn">+ Add Money</button>
+      </section>
+
+      <!-- Money Transfer section -->
+      <section class="section">
+        <h3 class="section-title">Transfer Money</h3>
+
+        <div class="grid">
+          <a href="#" class="grid-item">
+            <span class="icon">📱</span>
+            <p>To Mobile</p>
+          </a>
+          <a href="#" class="grid-item">
+            <span class="icon">🏦</span>
+            <p>To Bank</p>
+          </a>
+          <a href="#" class="grid-item">
+            <span class="icon">🔄</span>
+            <p>To Self</p>
+          </a>
+          <a href="#" class="grid-item">
+            <span class="icon">💰</span>
+            <p>Check Balance</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Recharge and Bills section -->
+      <section class="section">
+        <h3 class="section-title">Recharge &amp; Pay Bills</h3>
+
+        <div class="grid">
+          <a href="#" class="grid-item">
+            <span class="icon">📞</span>
+            <p>Mobile Recharge</p>
+          </a>
+          <a href="#" class="grid-item">
+            <span class="icon">💡</span>
+            <p>Electricity</p>
+          </a>
+          <a href="#" class="grid-item">
+            <span class="icon">📺</span>
+            <p>DTH</p>
+          </a>
+          <a href="#" class="grid-item">
+            <span class="icon">🚗</span>
+            <p>FASTag</p>
+          </a>
+          <a href="#" class="grid-item">
+            <span class="icon">🚰</span>
+            <p>Water</p>
+          </a>
+          <a href="#" class="grid-item">
+            <span class="icon">🔥</span>
+            <p>Gas</p>
+          </a>
+          <a href="#" class="grid-item">
+            <span class="icon">🌐</span>
+            <p>Broadband</p>
+          </a>
+          <a href="#" class="grid-item">
+            <span class="icon">➕</span>
+            <p>See All</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Offer banner -->
+      <section class="offer-banner">
+        <div>
+          <h3>Get ₹50 Cashback</h3>
+          <p>On your first electricity bill payment</p>
+        </div>
+        <button class="offer-btn">Claim</button>
+      </section>
+
+      <!-- Recent transactions -->
+      <section class="section">
+        <h3 class="section-title">Recent Transactions</h3>
+
+        <ul class="transactions">
+
+          <li class="transaction">
+            <div class="transaction-icon">S</div>
+            <div class="transaction-info">
+              <h4>Suresh Reddy</h4>
+              <p class="small-text">Today, 10:30 AM</p>
+            </div>
+            <span class="amount debit">- ₹500</span>
+          </li>
+
+          <li class="transaction">
+            <div class="transaction-icon">A</div>
+            <div class="transaction-info">
+              <h4>Anita Sharma</h4>
+              <p class="small-text">Yesterday, 6:45 PM</p>
+            </div>
+            <span class="amount credit">+ ₹1,200</span>
+          </li>
+
+          <li class="transaction">
+            <div class="transaction-icon">⚡</div>
+            <div class="transaction-info">
+              <h4>Electricity Bill</h4>
+              <p class="small-text">18 Nov, 2:15 PM</p>
+            </div>
+            <span class="amount debit">- ₹1,850</span>
+          </li>
+
+          <li class="transaction">
+            <div class="transaction-icon">📞</div>
+            <div class="transaction-info">
+              <h4>Mobile Recharge</h4>
+              <p class="small-text">15 Nov, 9:00 AM</p>
+            </div>
+            <span class="amount debit">- ₹299</span>
+          </li>
+
+        </ul>
+      </section>
+
+    </main>
+
+    <!-- ========== 3. BOTTOM NAVIGATION ========== -->
+    <nav class="bottom-nav">
+      <a href="#" class="nav-item active">
+        <span>🏠</span>
+        <p>Home</p>
+      </a>
+      <a href="#" class="nav-item">
+        <span>🏪</span>
+        <p>Stores</p>
+      </a>
+
+      <!-- Big round Scan button in the middle -->
+      <a href="#" class="nav-item scan-btn">
+        <span>📷</span>
+      </a>
+
+      <a href="#" class="nav-item">
+        <span>🕘</span>
+        <p>History</p>
+      </a>
+      <a href="#" class="nav-item">
+        <span>👤</span>
+        <p>Profile</p>
+      </a>
+    </nav>
+
+  </div>
+</body>
+</html>
